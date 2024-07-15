@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
-const dashboardRoutes = require('./controllers/dashboard-page');
+const dashboardRoutes = require('./controllers/dashboard-page'); 
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
@@ -40,7 +40,5 @@ app.use('/dashboard', dashboardRoutes);
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () =>
-    console.log(`Server is listening on http://localhost:${PORT}`)
-  );
+  app.listen(PORT, () => console.log(`Server is listening on http://localhost:${PORT}`));
 });

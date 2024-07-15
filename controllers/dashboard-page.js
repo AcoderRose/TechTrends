@@ -1,12 +1,10 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res) => { 
   try {
     if (!req.session.user_id) {
-      res.render('dashboard', {
-        message: 'Please log in to view the dashboard',
-      });
+      res.render('dashboard', { message: 'Please log in to view the dashboard' });
       return;
     }
 
@@ -15,7 +13,7 @@ router.get('/', async (req, res) => {
       where: { user_id: req.session.user_id },
       include: [
         { model: Comment, include: [{ model: User }] },
-        { model: User },
+        { model: User }
       ],
     });
 

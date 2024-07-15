@@ -6,3 +6,4 @@ CREATE DATABASE blog_db;
 
 -- CONNECT DATABASE
 \c blog_db;
+
