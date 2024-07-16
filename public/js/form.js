@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     submitPostButton = removeEventListener("click", submitPostButton);
     submitPostButton.addEventListener("click", async (event) => {
       event.preventDefault();
-      const title = document.getElementById("postTitle").value;
-      const content = document.getElementById("postContent").value;
+      let title = document.getElementById("postTitle").value;
+      let content = document.getElementById("postContent").value;
 
       try {
-        const response = await fetch("/api/post", {
+        let response = await fetch("/api/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
     button = removeEventListener("click", button);
     button.addEventListener("click", (event) => {
       event.preventDefault();
-      const postId = button.dataset.postId;
-      const title = button.dataset.title;
-      const content = button.dataset.content;
+      let postId = button.dataset.postId;
+      let title = button.dataset.title;
+      let content = button.dataset.content;
 
       // set the data-post-id on the resubmit button
       submitUpdatedPostButton.setAttribute("data-post-id", postId);
@@ -153,11 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
     submitCommentButton = removeEventListener("click", submitCommentButton);
     submitCommentButton.addEventListener("click", async (event) => {
       event.preventDefault();
-      const content = document.getElementById("commentContent").value;
-      const postId = window.location.pathname.split("/").pop();
+      let content = document.getElementById("commentContent").value;
+      let postId = window.location.pathname.split("/").pop();
 
       try {
-        const response = await fetch(`/api/comment/${postId}`, {
+        let response = await fetch(`/api/comment/${postId}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ content }),
