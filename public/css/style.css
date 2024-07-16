@@ -1,0 +1,248 @@
+:root {
+  --black: #303242;
+  --navy: #394359;
+  --dark-orange: #f77754;
+  --light-orange: #ffe8d6;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  background-color: var(--light-orange);
+}
+
+a {
+  color: var(--light-orange);
+  text-decoration: none;
+}
+
+header {
+  padding: 20px 20px 10px 20px;
+  text-align: center;
+  background: var(--black);
+  color: var(--light-orange);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+aside {
+  flex: 0;
+  background-color: var(--dark-orange);
+  padding: 50px;
+  text-align: left;
+  color: var(--light-orange);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 14px 20px;
+  background-color: var(--navy);
+}
+
+nav a {
+  color: var(--light-orange);
+  background-color: var(--black);
+  padding: 14px 20px;
+  margin: 3px;
+  text-decoration: none;
+  text-align: center;
+  border: solid var(--black);
+  filter: drop-shadow(5px 5px 5px var(--black));
+}
+
+nav a:hover {
+  color: var(--navy);
+  background-color: var(--black);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 10px 0 32px 0;
+}
+
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.75em;
+  border-bottom: 0.3em solid var(--black);
+}
+
+h3 {
+  font-size: 1.5em;
+  padding: 1em 0.25em 0.25em;
+}
+
+textarea {
+  width: 50%;
+  min-width: 300px;
+  min-height: 100px;
+  margin-top: 2px;
+}
+
+.post-username,
+.post-date {
+  font-weight: bold;
+}
+
+.post-username {
+  font-size: 1em;
+}
+
+.post-date {
+  font-size: 0.8em;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  text-align: center;
+}
+
+.form-input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid var(--light-orange);
+  border-radius: 4px;
+}
+
+.btn {
+  background-color: var(--light-orange);
+  color: var(--black);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--black);
+  color: var(--light-orange);
+}
+
+.dashboard-title {
+  color: var(--light-orange);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  background-color: var(--dark-orange);
+  padding: 15px;
+  border-radius: 0.3rem;
+  filter: drop-shadow(0px 5px 5px var(--black));
+}
+
+.user {
+  flex: 4;
+  background-color: var(--light-orange);
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center {
+  justify-content: center;
+}
+
+.single-post,
+.post {
+  color: var(--black);
+  background-color: var(--light-orange);
+  margin: 20px;
+  padding: 10px;
+  border: 7px double var(--black);
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.single-post header,
+.post header {
+  color: var(--light-orange);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  background-color: var(--dark-orange);
+  padding: 15px;
+  border-radius: 0.3rem;
+}
+
+.posts,
+.login-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px auto auto auto;
+}
+
+.delete-btn {
+  background-color: var(--light-orange);
+  color: var(--black);
+  padding: 5px 10px;
+  border: 2px solid var(--black);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 0.6em;
+  font-weight: bolder;
+  position: absolute;
+  right: 3px;
+  top: 65px;
+}
+
+.login-card {
+  background-color: var(--navy);
+  color: var(--light-orange);
+  margin: 20px;
+  padding: 10px;
+  border: 7px double var(--black);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.3rem;
+  border-width: thick;
+  justify-content: space-between;
+}
+
+.comment {
+  padding: 0 2px 2px 5px;
+  flex: 0 1 300px;
+  border: 1px dotted var(--black);
+  border-radius: 10px;
+  background-color: var(--light-orange);
+  color: var(--black);
+  font-size: 0.8em;
+  line-height: 0.8;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  align-items: center;
+}
