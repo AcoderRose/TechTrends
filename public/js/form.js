@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // remove any existing event listeners
   function removeEventListener(type, element) {
-    const newElement = element.cloneNode(true);
+    let newElement = element.cloneNode(true);
     element.parentNode.replaceChild(newElement, element);
     return newElement;
   }
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // post deletion
   document.addEventListener("click", async (event) => {
     if (event.target.classList.contains("deleteBtn")) {
-      const postId = event.target.dataset.postId;
+      let postId = event.target.dataset.postId;
 
       try {
-        const response = await fetch(`/api/post/${postId}`, {
+        let response = await fetch(`/api/post/${postId}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
         });
